@@ -1,0 +1,27 @@
+{
+  "name": "scheda-dnd",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "build": {
+      "appId": "com.version.schedadnd",
+      "productName": "Scheda DeD",
+      "win": {
+        "target": "nsis"
+      },
+      "nsis": {
+        "oneClick": true,
+        "perMachine": false,
+        "allowToChangeInstallationDirectory": false,
+        "createDesktopShortcut": true,
+        "shortcutName": "Scheda D&D"
+      }
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^26.8.2"
+  }
+}
